@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Footer from '../src/components/commons/Footer'
 import Menu from '../src/components/commons/Menu'
 
 const Title = styled.h1`
@@ -7,5 +8,16 @@ const Title = styled.h1`
 `
 
 export default function Home() {
-  return <Menu />
+  return (
+    <div style={{
+      flex: '1',
+      display: 'flex',
+      flexWrap: 'wrap',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
+    }}>
+      <Menu />
+      <Footer />
+    </div>
+  );
 }
