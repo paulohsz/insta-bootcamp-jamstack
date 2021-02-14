@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "../../../theme/Logo";
+import { Button } from "../Button";
 import { MenuWrapper } from "./styles/MenuWrapper";
 
 const links = [
@@ -26,15 +27,19 @@ export default function Menu() {
       <MenuWrapper.CentralSide as="ul">
         {links.map((link) => {
           return (
-            <li>
+            <li key={link.url}>
               <a href={link.url}>{link.text}</a>
             </li>
           );
         })}
       </MenuWrapper.CentralSide>
       <MenuWrapper.RightSide>
-        <button>Entrar</button>
-        <button>Carregar</button>
+        <Button type="button" ghost variant="secondary.main">
+          Entrar
+        </Button>
+        <Button type="button" variant="primary.main">
+          Carregar
+        </Button>
       </MenuWrapper.RightSide>
     </MenuWrapper>
   );
