@@ -1,19 +1,14 @@
-import styled from 'styled-components'
-import Footer from '../src/components/commons/Footer'
-import Menu from '../src/components/commons/Menu'
-import { Text } from '../src/components/foundation/Text';
-import { Button } from '../src/components/commons/Button';
-import { Grid } from '../src/components/layout/Grid';
-import { Box } from '../src/components/layout/Box';
-
-const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
-`
+import React from 'react';
+import Footer from '../src/components/commons/Footer';
+import Menu from '../src/components/commons/Menu';
+import Text from '../src/components/foundation/Text';
+import Button from '../src/components/commons/Button';
+import Grid from '../src/components/layout/Grid';
+import Box from '../src/components/layout/Box';
 
 export default function Home() {
   return (
-    <Box 
+    <Box
       flex={1}
       display="flex"
       flexWrap="wrap"
@@ -25,7 +20,7 @@ export default function Home() {
     >
       <Menu />
 
-      <Grid.Container marginTop={{xs: '32px', md: '75px'}}>
+      <Grid.Container marginTop={{ xs: '32px', md: '75px' }}>
         <Grid.Row>
           <Grid.Col
             offset={{ xs: 0, md: 1 }}
@@ -70,11 +65,12 @@ export default function Home() {
                 Cadastrar
               </Button>
             </div>
-            </Grid.Col>
+          </Grid.Col>
           <Grid.Col
             value={{ xs: 12, md: 6 }}
           >
             <img
+              alt="the cell phone with internal pages of actor Nicolas Cage's profile"
               style={{ display: 'block', margin: 'auto' }}
               src="https://bootcamp-alura-01-git-modulo01.omariosouto.vercel.app/images/phones.png"
             />
