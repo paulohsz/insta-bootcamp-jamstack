@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { breakpointsMedia } from "../../../theme/utils/breakpointsMedia";
+import { propToStyle } from "../../../theme/utils/propToStyle";
 
 const Col = styled.div`
   padding-right: 16px;
@@ -7,6 +8,7 @@ const Col = styled.div`
   flex-basis: 0;
   flex-grow: 1;
   max-width: 100%;
+
   ${({ value }) => {
     if (typeof value === "number") {
       return css`
@@ -47,6 +49,7 @@ const Col = styled.div`
       }),
     });
   }}
+
   ${({ offset }) => {
     if (typeof offset === "number") {
       return css`
@@ -81,6 +84,12 @@ const Col = styled.div`
       }),
     });
   }}
+
+  ${propToStyle('display')}
+  ${propToStyle('alignItems')}
+  ${propToStyle('justifyContent')}
+  ${propToStyle('flexDirection')}
+
 `;
 
 Col.defaultProps = {
@@ -95,6 +104,8 @@ export const Grid = {
     padding-left: 28px;
     margin-right: auto;
     margin-left: auto;
+
+    ${propToStyle('marginTop')}
 
     ${breakpointsMedia({
       xs: css`
