@@ -5,6 +5,7 @@ import Text from '../src/components/foundation/Text';
 import Button from '../src/components/commons/Button';
 import Grid from '../src/components/layout/Grid';
 import Box from '../src/components/layout/Box';
+import Bubbles from '../src/theme/Bubbles';
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
       flexWrap="wrap"
       flexDirection="column"
       justifyContent="space-between"
-      backgroundImage="url(/images/bubbles.svg)"
+      backgroundImage={`url(${Bubbles.url()})`}
       backgroundRepeat="no-repeat"
       backgroundPosition="bottom right"
     >
@@ -34,7 +35,7 @@ export default function Home() {
               <Text
                 variant="title"
                 tag="h1"
-                color="tertiary.main"
+                color="tertiary.textTitle"
                 textAlign={{
                   xs: 'center',
                   md: 'left',
@@ -45,7 +46,7 @@ export default function Home() {
               <Text
                 variant="paragraph1"
                 tag="p"
-                color="tertiary.light"
+                color="tertiary.textSubTitle"
                 textAlign={{
                   xs: 'center',
                   md: 'left',
