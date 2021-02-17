@@ -1,43 +1,99 @@
 import typographyVariants from './typographyVariants';
 
-export const colors = {
-  background: {
-    light: {
-      color: '#FFFFFF',
+export const colorsType = {
+  light: {
+    background: {
+      light: {
+        color: '#F2F2F2',
+      },
+      main: {
+        color: '#FFFFFF',
+      },
     },
-    main: {
-      color: '#F2F2F2',
+    borders: {
+      main: {
+        color: '#F1F1F1',
+      },
     },
-  },
-  borders: {
-    main: {
-      color: '#F1F1F1',
+    primary: {
+      main: {
+        color: '#D7385E',
+        contrastText: '#fff',
+      },
     },
-  },
-  primary: {
-    main: {
-      color: '#D7385E',
-      contrastText: '#fff',
+    secondary: {
+      main: {
+        color: '#FB7B6B',
+        contrastText: '#fff',
+      },
     },
-  },
-  secondary: {
-    main: {
-      color: '#FB7B6B',
-      contrastText: '#fff',
+    tertiary: {
+      main: {
+        color: '#070C0E',
+        contrastText: '#fff',
+      },
+      light: {
+        color: '#88989E',
+        contrastText: '#fff',
+      },
+      textTitle: {
+        color: '#070C0E',
+      },
+      textSubTitle: {
+        color: '#88989E',
+      },
     },
-  },
-  tertiary: {
-    main: {
+    svg: {
       color: '#070C0E',
-      contrastText: '#fff',
-    },
-    light: {
-      color: '#88989E',
-      contrastText: '#fff',
+      background: '#070C0E',
     },
   },
-  modes: {
-    dark: {},
+  dark: {
+    background: {
+      light: {
+        color: '#1f1f1f',
+      },
+      main: {
+        color: '#030506',
+      },
+    },
+    borders: {
+      main: {
+        color: '#181F22',
+      },
+    },
+    primary: {
+      main: {
+        color: '#D7385E',
+        contrastText: '#fff',
+      },
+    },
+    secondary: {
+      main: {
+        color: '#FFA59A',
+        contrastText: '#fff',
+      },
+    },
+    tertiary: {
+      main: {
+        color: '#FFA59A',
+        contrastText: '#070C0E',
+      },
+      light: {
+        color: '#FFFFFF',
+        contrastText: '#070C0E',
+      },
+      textTitle: {
+        color: '#FFFFFF',
+      },
+      textSubTitle: {
+        color: '#D4D4D4',
+      },
+    },
+    svg: {
+      color: '#FFFFFF',
+      background: '#FFFFFF',
+    },
   },
 };
 
@@ -50,7 +106,7 @@ export const breakpoints = {
 };
 
 export default {
-  colors,
+  // colors,
   typographyVariants,
   breakpoints,
   borderRadius: '12px',
