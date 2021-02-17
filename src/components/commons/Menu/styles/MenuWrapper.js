@@ -78,7 +78,7 @@ MenuWrapper.CentralSide = styled.div`
     text-align: center;
     display: block;
     text-decoration: none;
-    color: #88989E;
+    color: ${({ theme }) => theme.colors.tertiary.light.color};
     transition: 200ms ease-in-out;
     ${breakpointsMedia({
     xs: css`
@@ -91,7 +91,7 @@ MenuWrapper.CentralSide = styled.div`
     &:hover,
     &:focus {
       font-weight: 500;
-      color: #070C0E;
+      color: ${({ theme }) => theme.colors.tertiary.main.color};
       
     }
   }
