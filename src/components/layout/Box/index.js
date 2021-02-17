@@ -10,6 +10,7 @@ const Box = styled.div`
   ${propToStyle('backgroundImage')}
   ${propToStyle('backgroundRepeat')}
   ${propToStyle('backgroundPosition')}
+  background-color: ${({ theme }) => theme.colors.background.main.color};
 `;
 
 export default Box;
