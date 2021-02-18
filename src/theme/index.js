@@ -3,11 +3,8 @@ import typographyVariants from './typographyVariants';
 export const colorsType = {
   light: {
     background: {
-      light: {
-        color: '#F2F2F2',
-      },
       main: {
-        color: '#FFFFFF',
+        color: '#F2F2F2',
       },
     },
     borders: {
@@ -36,6 +33,7 @@ export const colorsType = {
         color: '#88989E',
         contrastText: '#fff',
       },
+      // delete
       textTitle: {
         color: '#070C0E',
       },
@@ -45,14 +43,10 @@ export const colorsType = {
     },
     svg: {
       color: '#070C0E',
-      background: '#070C0E',
     },
   },
   dark: {
     background: {
-      light: {
-        color: '#1f1f1f',
-      },
       main: {
         color: '#030506',
       },
@@ -64,7 +58,7 @@ export const colorsType = {
     },
     primary: {
       main: {
-        color: '#D7385E',
+        color: '#F27895',
         contrastText: '#fff',
       },
     },
@@ -76,13 +70,14 @@ export const colorsType = {
     },
     tertiary: {
       main: {
-        color: '#FFA59A',
-        contrastText: '#070C0E',
+        color: '#D4D4D4',
+        contrastText: '#030506',
       },
       light: {
         color: '#FFFFFF',
-        contrastText: '#070C0E',
+        contrastText: '#030506',
       },
+      // delete
       textTitle: {
         color: '#FFFFFF',
       },
@@ -92,7 +87,6 @@ export const colorsType = {
     },
     svg: {
       color: '#FFFFFF',
-      background: '#FFFFFF',
     },
   },
 };
