@@ -33,13 +33,6 @@ export const colorsType = {
         color: '#88989E',
         contrastText: '#fff',
       },
-      // delete
-      textTitle: {
-        color: '#070C0E',
-      },
-      textSubTitle: {
-        color: '#88989E',
-      },
     },
     svg: {
       color: '#070C0E',
@@ -58,7 +51,7 @@ export const colorsType = {
     },
     primary: {
       main: {
-        color: '#F27895',
+        color: '#D7385E',
         contrastText: '#fff',
       },
     },
@@ -70,19 +63,12 @@ export const colorsType = {
     },
     tertiary: {
       main: {
-        color: '#D4D4D4',
+        color: '#FFFFFF',
         contrastText: '#030506',
       },
       light: {
-        color: '#FFFFFF',
-        contrastText: '#030506',
-      },
-      // delete
-      textTitle: {
-        color: '#FFFFFF',
-      },
-      textSubTitle: {
         color: '#D4D4D4',
+        contrastText: '#030506',
       },
     },
     svg: {
