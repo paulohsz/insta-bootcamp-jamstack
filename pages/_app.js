@@ -7,13 +7,11 @@ import ThemeContext from '../src/contexts/theme';
 
 // eslint-disable-next-line react/prop-types
 export default function App({ Component, pageProps }) {
-  const [colors, setThemeColors] = useState({ mode: 'light', ...colorsType.light });
+  const [colors, setThemeColors] = useState('light');
 
-  function toggleDarkMode() {
+  function ThemeToggler() {
     setThemeColors(
-      colors.mode === 'dark'
-        ? { mode: 'light', ...colorsType.light }
-        : { mode: 'dark', ...colorsType.dark },
+      (colors === 'dark') ? 'light' : 'dark',
     );
   }
 
@@ -24,8 +22,8 @@ export default function App({ Component, pageProps }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
       </Head>
-      <ThemeContext.Provider value={{ colors, toggleDarkMode }}>
-        <ThemeProvider theme={{ ...theme, colors }}>
+      <ThemeContext.Provider value={{ colors, ThemeToggler }}>
+        <ThemeProvider theme={{ ...theme, colors: colorsType[colors] }}>
           <GlobalStyle />
           {/* eslint-disable-next-line react/jsx-props-no-spreading */}
           <Component {...pageProps} />

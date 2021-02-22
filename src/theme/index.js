@@ -2,6 +2,7 @@ import typographyVariants from './typographyVariants';
 
 export const colorsType = {
   light: {
+    mode: 'light',
     background: {
       main: {
         color: '#F2F2F2',
@@ -39,6 +40,7 @@ export const colorsType = {
     },
   },
   dark: {
+    mode: 'dark',
     background: {
       main: {
         color: '#030506',
