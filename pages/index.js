@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Footer from '../src/components/commons/Footer';
 import Menu from '../src/components/commons/Menu';
 import Text from '../src/components/foundation/Text';
@@ -9,7 +9,7 @@ import Bubbles from '../src/theme/Bubbles';
 import Modal from '../src/components/commons/Modal';
 
 export default function Home() {
-  const [isModalOpen, setModalState] = React.useState(false);
+  const [isModalOpen, setModalState] = useState(false);
 
   return (
     <Box
