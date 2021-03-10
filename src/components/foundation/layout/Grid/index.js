@@ -85,13 +85,13 @@ const Col = styled.div`
     });
   }}
 
-
   ${propToStyle('display')}
   ${propToStyle('alignItems')}
   ${propToStyle('justifyContent')}
   ${propToStyle('flexDirection')}
   ${propToStyle('paddingRight')}
-
+  ${propToStyle('order')}
+  
 `;
 
 Col.defaultProps = {
@@ -109,7 +109,6 @@ const Grid = {
 
     ${propToStyle('marginTop')}
     
-
     ${breakpointsMedia({
     xs: css`
         max-width: initial;
@@ -138,8 +137,11 @@ const Grid = {
     margin-right: -16px;
     margin-left: -16px;
     ${propToStyle('flex')}
-    ${propToStyle('marginLeft')}
+    ${propToStyle('flexDirection')}
+    ${propToStyle('marginTop')}
     ${propToStyle('marginRight')}
+    ${propToStyle('marginBottom')}
+    ${propToStyle('marginLeft')}
     ${propToStyle('justifyContent')}
   `,
   Col,
