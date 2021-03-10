@@ -42,7 +42,8 @@ export default function Home() {
           <FormCadastro propsDoModal={propsDoModal} />
         )}
       </Modal>
-      <Menu />
+
+      <Menu onCadastrarClick={() => setModalState(true)} />
 
       <Grid.Container marginTop={{ xs: '32px', md: '75px' }}>
         <Grid.Row>
