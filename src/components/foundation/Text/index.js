@@ -1,10 +1,10 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import get from 'lodash/get';
 import PropTypes from 'prop-types';
 import propToStyle from '../../../theme/utils/propToStyle';
 import breakpointsMedia from '../../../theme/utils/breakpointsMedia';
+import Link from '../../commons/Link';
 
 const paragraph1 = css`
   ${({ theme }) => css`
@@ -55,8 +55,23 @@ export default function Text({
   variant,
   children,
   tag,
+  href,
   ...props
 }) {
+  if (href) {
+    return (
+      <TextBase
+        as={Link}
+        variant={variant}
+        href={href}
+      // eslint-disable-next-line react/jsx-props-no-spreading
+        {...props}
+      >
+        {children}
+      </TextBase>
+    );
+  }
+
   return (
     <TextBase
       as={tag}
@@ -73,10 +88,12 @@ Text.defaultProps = {
   tag: 'span',
   variant: 'paragraph1',
   children: null,
+  href: '',
 };
 
 Text.propTypes = {
   children: PropTypes.node,
   tag: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'li', 'a', 'span', 'input']),
   variant: PropTypes.oneOf(['title', 'paragraph1', 'smallestException']),
+  href: PropTypes.string,
 };
