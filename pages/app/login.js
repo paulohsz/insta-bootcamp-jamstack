@@ -1,13 +1,21 @@
 import React from 'react';
+import websitePageHOC from '../../src/components/wrappers/WebsitePage/hoc';
 
-export default function LoginPage() {
+function LoginScreen() {
   return (
     <div>
-      Login
-      <br />
-      <a href="/">
-        Go back to home with refresh
-      </a>
+      Página de Login
     </div>
   );
 }
+
+export default websitePageHOC(LoginScreen, {
+  pageWrapperProps: {
+    seoProps: {
+      headTitle: 'Login',
+    },
+    menuProps: {
+      display: false,
+    },
+  },
+});
