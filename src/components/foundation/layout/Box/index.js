@@ -13,7 +13,6 @@ const Box = styled.div`
   ${propToStyle('backgroundPosition')}
   ${propToStyle('boxShadow')}
   ${propToStyle('padding')}
-  background-color: ${({ theme }) => theme.colors.background.main.color};
 
   ${propToStyle('width')}
   ${propToStyle('listStyle')}

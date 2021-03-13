@@ -1,51 +1,21 @@
-import React, { useState } from 'react';
-import Footer from '../src/components/commons/Footer';
-import Menu from '../src/components/commons/Menu';
+import React, { useContext } from 'react';
 import Text from '../src/components/foundation/Text';
 import Button from '../src/components/commons/Button';
 import Grid from '../src/components/foundation/layout/Grid';
 import Box from '../src/components/foundation/layout/Box';
-import Bubbles from '../src/theme/Bubbles';
-import Modal from '../src/components/commons/Modal';
-import FormCadastro from '../src/components/patterns/FormCadastro';
-import SEO from '../src/components/commons/SEO';
 
-export default function Home() {
-  const [isModalOpen, setModalState] = useState(false);
+import { WebsitePageContext } from '../src/components/wrappers/WebsitePage';
+import websitePageHOC from '../src/components/wrappers/WebsitePage/hoc';
+
+function HomeScreen() {
+  const websitePageContext = useContext(WebsitePageContext);
 
   return (
     <Box
-      flex={1}
       display="flex"
-      flexWrap="wrap"
       flexDirection="column"
-      justifyContent="space-between"
-      backgroundImage={`url(${Bubbles.url()})`}
-      backgroundRepeat="no-repeat"
-      backgroundPosition="bottom right"
+      flex="1"
     >
-      <SEO headTitle="Home" />
-      {/*
-        [SOLID]
-        S = Single Responsability
-        O = Open Closed
-        L = Liskov Substitution
-        I = Interface Segregation
-        D = Dependency Inversion
-      */}
-      {/* {isModalOpen && <Modal />} */}
-      <Modal
-        isOpen={isModalOpen}
-        onClose={() => {
-          setModalState(false);
-        }}
-      >
-        {(propsDoModal) => (
-          <FormCadastro propsDoModal={propsDoModal} />
-        )}
-      </Modal>
-
-      <Menu onCadastrarClick={() => setModalState(true)} />
 
       <Grid.Container marginTop={{ xs: '32px', md: '75px' }}>
         <Grid.Row>
@@ -88,11 +58,12 @@ export default function Home() {
                   md: 'initial',
                 }}
                 display="block"
-                onClick={() => {
+                // onClick={() => {
                   // isModalOpen = true;
                   // console.log('isModalOpen', isModalOpen);
-                  setModalState(!isModalOpen); // novo state sendo atribuido
-                }}
+                  // setModalState(!isModalOpen); // novo state sendo atribuido
+                // }}
+                onClick={() => websitePageContext.toggleModalCadastro()}
               >
                 Cadastrar
               </Button>
@@ -110,7 +81,23 @@ export default function Home() {
         </Grid.Row>
       </Grid.Container>
 
-      <Footer />
     </Box>
   );
 }
+
+export default websitePageHOC(HomeScreen, {
+  pageWrapperProps: {
+    seoProps: {
+      headTitle: 'Home',
+    },
+    pageBoxProps: {
+      flexWrap: 'wrap',
+      justifyContent: 'space-between',
+      // backgroundImage: `url(${Bubbles.url()})`,
+      backgroundImage: 'url(images/bubbles.svg)',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'bottom right',
+      backgroundColor: '#F2F2F2',
+    },
+  },
+});
