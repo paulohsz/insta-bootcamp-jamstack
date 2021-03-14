@@ -107,6 +107,8 @@ const Grid = {
     margin-right: auto;
     margin-left: auto;
 
+
+    ${propToStyle('flex')}
     ${propToStyle('marginTop')}
     
     ${breakpointsMedia({
