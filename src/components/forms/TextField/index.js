@@ -25,6 +25,8 @@ export default function TextField({
   name,
   onChange,
   value,
+  // eslint-disable-next-line no-unused-vars
+  ...props
 }) {
   return (
     <InputWrapper>
@@ -34,6 +36,8 @@ export default function TextField({
         name={name}
         onChange={onChange}
         value={value}
+        // eslint-disable-next-line react/jsx-props-no-spreading
+        {...props}
       />
     </InputWrapper>
   );
