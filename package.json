@@ -10,6 +10,8 @@
     "lint": "eslint --ignore-path .gitignore .",
     "custom-script": "node ./script-test.js",
     "commit": "cz",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "test:integration:open": "cypress open",
     "test:integration": "cypress run --headless"
   },
@@ -27,6 +29,7 @@
     "styled-normalize": "^8.0.7"
   },
   "devDependencies": {
+    "@types/jest": "^26.0.22",
     "babel-plugin-styled-components": "^1.8.0",
     "cypress": "^6.4.0",
     "cz-conventional-changelog": "3.3.0",
@@ -34,10 +37,12 @@
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-cypress": "^2.11.2",
     "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.3.3",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.23.1",
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^6.0.0",
+    "jest": "^26.6.3",
     "shelljs": "^0.8.4"
   },
   "husky": {
