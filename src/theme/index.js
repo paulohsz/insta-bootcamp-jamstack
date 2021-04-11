@@ -38,6 +38,19 @@ export const colorsType = {
     svg: {
       color: '#070C0E',
     },
+    // Feedback colors
+    error: {
+      main: {
+        color: '#dc3545',
+        contrastText: '#fff',
+      },
+    },
+    success: {
+      main: {
+        color: '#28a745',
+        contrastText: '#fff',
+      },
+    },
   },
   dark: {
     mode: 'dark',
@@ -75,6 +88,19 @@ export const colorsType = {
     },
     svg: {
       color: '#FFFFFF',
+    },
+    // Feedback colors
+    error: {
+      main: {
+        color: '#dc3545',
+        contrastText: '#fff',
+      },
+    },
+    success: {
+      main: {
+        color: '#28a745',
+        contrastText: '#fff',
+      },
     },
   },
 };
