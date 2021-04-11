@@ -75,10 +75,6 @@ export default function LoginForm() {
       >
         Entrar
       </Button>
-
-      <pre>
-        {JSON.stringify(form.touched, null, 4)}
-      </pre>
     </form>
   );
 }
