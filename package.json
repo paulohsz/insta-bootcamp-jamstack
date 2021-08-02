@@ -34,7 +34,7 @@
     "@testing-library/react": "^12.0.0",
     "@testing-library/react-hooks": "^7.0.1",
     "@types/jest": "^26.0.24",
-    "babel-plugin-styled-components": "^1.8.0",
+    "babel-plugin-styled-components": "^1.13.2",
     "cypress": "^8.0.0",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "^7.31.0",
